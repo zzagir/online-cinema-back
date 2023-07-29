@@ -47,7 +47,7 @@ export class UserController {
 	}
 
 	@Get(':id')
-	@Auth()
+	@Auth('admin')
 	async getUser(@Param('id', IdValidationPipe) id: string) {
 		return this.userService.byId(id)
 	}
