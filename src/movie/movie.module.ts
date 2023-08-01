@@ -10,7 +10,7 @@ import { TypegooseModule } from 'nestjs-typegoose'
 			{
 				typegooseClass: MovieModel,
 				schemaOptions: {
-					collection: 'movie',
+					collection: 'Movie',
 				},
 			},
 		]),
