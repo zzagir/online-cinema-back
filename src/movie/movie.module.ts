@@ -5,6 +5,7 @@ import { MovieModel } from './movie.model'
 import { TypegooseModule } from 'nestjs-typegoose'
 
 @Module({
+	controllers: [MovieController],
 	imports: [
 		TypegooseModule.forFeature([
 			{
@@ -15,7 +16,7 @@ import { TypegooseModule } from 'nestjs-typegoose'
 			},
 		]),
 	],
-	controllers: [MovieController],
 	providers: [MovieService],
+	exports: [MovieService],
 })
 export class MovieModule {}
